@@ -1,33 +1,51 @@
 package com.example;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.math.BigDecimal;
 import java.util.Date;
+import java.util.Scanner;
 
-/**
- * Created by nishant on 28/9/17.
- */
 
 public class Java_Application {
 
     public static void main(String[] args) {
 
-        char [] ch ={'H','E','L','L','O','!'};
+        int[] d;
 
-        String s=new String(ch);
+        d=new int[]{1,2,3};
 
-        double d= 123.9087;
+        String  user_string = getInput("");
 
-        String string = Double.toString(d);
+        int average=  average(d);
 
-        BigDecimal payment=new BigDecimal(string);
-
-        Double decimal =new Double(d);
-
-        int interger  =  decimal.intValue();
-
-        Date date= new Date();
-
-        System.out.println(++interger+123+"Hello_World"+s+payment+"!!!!!!"+date);
-
+        System.out.println("Hello_World"+user_string+average);
     }
+
+
+    private static String getInput(String input_String){
+
+        BufferedReader stdin = new BufferedReader(new InputStreamReader(System.in));
+
+        System.out.print(input_String);
+        System.out.flush();
+
+        try {
+            return stdin.readLine();
+
+        }catch (Exception expection){
+            return "Error:"+expection.getMessage();
+        }
+    }
+
+    public static int average (int...numbers)
+    {
+        int total =0;
+        for(int x:numbers)
+        {
+            total+=x;
+        }
+        return total/numbers.length;
+    }
+
 }
