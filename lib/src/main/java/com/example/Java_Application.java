@@ -74,29 +74,6 @@ public class Java_Application {
     }
 
 
-    private static String getInput(String input_String){
 
-        BufferedReader stdin = new BufferedReader(new InputStreamReader(System.in));
-
-        System.out.print(input_String);
-        System.out.flush();
-
-        try {
-            return stdin.readLine();
-
-        }catch (Exception expection){
-            return "Error:"+expection.getMessage();
-        }
-    }
-
-    public static int average (int...numbers)
-    {
-        int total =0;
-        for(int x:numbers)
-        {
-            total+=x;
-        }
-        return total/numbers.length;
-    }
 
 }
