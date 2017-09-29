@@ -3,6 +3,8 @@ package com.example;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.math.BigDecimal;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.Date;
 import java.util.Scanner;
 
@@ -11,15 +13,31 @@ public class Java_Application {
 
     public static void main(String[] args) {
 
+        try {
+            URI uri=new URI("https://www.youtube.com");
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
+        }
+
         int[] d;
 
         d=new int[]{1,2,3};
 
         String  user_string = getInput("");
 
-        int average=  average(d);
+     //   int average=  average(d);
 
-        System.out.println("Hello_World"+user_string+average);
+        char [] ch = user_string.toCharArray();
+
+    //    System.out.println("Hello_World"+user_string+average);
+
+          user_string.trim();
+          
+        for(char c:ch){
+
+            System.out.println(c);
+        }
+
     }
 
 
