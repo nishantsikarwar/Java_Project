@@ -6,7 +6,8 @@ package com.example;
 
 public class Average {
 
-    public static int average (int...numbers)
+
+    public static int Average (int...numbers)
     {
         int total =0;
         for(int x:numbers)
